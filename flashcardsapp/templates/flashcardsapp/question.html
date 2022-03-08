@@ -1,0 +1,17 @@
+{% extends 'flashcardsapp/base.html' %}
+
+{% block title %}Question{% endblock %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<h3> {{ card.question }}<h3>
+
+        <p><a class="btn btn-primary" href="/answer-{{id}}" role="button">Show Answer</a></p>
+
+        {% else %}
+        <p> Please <a href="/login">Login</a> to see your FlashCards</a>
+            {% endif %}
+
+            {% endblock %}
